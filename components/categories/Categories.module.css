@@ -1,0 +1,42 @@
+.scroll_container {
+    width: 100%;
+    overflow: hidden;
+  
+}
+
+.categories_list {
+    display: flex;
+    flex-direction: row;
+    gap: 8px; /* Расстояние между кнопками */
+    overflow-x: auto; /* Включает горизонтальный скролл */
+    scroll-behavior: smooth;
+    
+    /* Скрытие скроллбара для Firefox и IE */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+/* Скрытие скроллбара для Chrome, Safari и Opera */
+.categories_list::-webkit-scrollbar {
+    display: none;
+}
+
+/* Базовый стиль неактивной кнопки */
+.category_btn {
+    background: #1a1a1a; /* Темно-серый фон */
+    color: #fff;
+    border: none;
+    border-radius: 20px; /* Круглые края (pill-shape) */
+    padding: 8px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap; /* Запрещает перенос текста на новую строку */
+    transition: all 0.2s ease;
+}
+
+/* Стиль активной кнопки */
+.category_btn.active {
+    background: #fff; /* Белый фон */
+    color: #000;      /* Черный текст */
+}

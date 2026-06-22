@@ -1,12 +1,38 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-bg-base: #f2f2f7;
+  --color-bg-surface: #ffffff;
+  --color-bg-card: #ffffff;
+  --color-bg-icon: #e5e5ea;
+  --color-bg-rating: rgba(255, 255, 255, 0.55);
+
+  --color-text-primary: #000000;
+  --color-text-secondary: #3a3a3c;
+  --color-text-tertiary: rgba(0, 0, 0, 0.4);
+  --color-text-muted: #8e8e93;
+  --color-text-placeholder: #aeaeb2;
+  --color-text-inactive: #c7c7cc;
+
+  --color-border-chip: #d1d1d6;
+  --color-border-card: #e5e5ea;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --color-bg-base: #000000;
+    --color-bg-surface: #1c1c1e;
+    --color-bg-card: #111111;
+    --color-bg-icon: #1a1a1a;
+    --color-bg-rating: rgba(0, 0, 0, 0.65);
+
+    --color-text-primary: #e2e2e2;
+    --color-text-secondary: #c5c5c5;
+    --color-text-tertiary: rgba(255, 255, 255, 0.4);
+    --color-text-muted: #666666;
+    --color-text-placeholder: #555555;
+    --color-text-inactive: #444444;
+
+    --color-border-chip: #2a2a2a;
+    --color-border-card: #222222;
   }
 }
 
@@ -24,11 +50,15 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  justify-content: space-between;
+  color: var(--color-text-primary);
+  background: var(--color-bg-base);
+  
+  
+}
+
+main{
+  padding: 10px 15px;
 }
 
 * {

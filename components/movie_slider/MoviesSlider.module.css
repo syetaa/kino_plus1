@@ -1,0 +1,53 @@
+.slider_container {
+    width: 100%;
+}
+
+/* Принудительно задаем фиксированную ширину слайда, чтобы работал slidesPerView={'auto'} */
+.movie_slide {
+    width: 140px !important; 
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+/* Заглушка под будущую картинку */
+.poster_placeholder {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 2 / 3; /* Идеальные пропорции кинопостера */
+    background: linear-gradient(135deg, #3b2d54 0%, #1a2636 100%); /* Фирменный фиолетово-синий градиент */
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Маленькая темная плашка с рейтингом в углу */
+.rating {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: var(--color-bg-rating);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.movie_title {
+    font-size: 14px;
+    font-weight: 500;
+    
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Если название длинное, оно плавно превратится в троеточие */
+}
+
+.movie_info {
+    color: var(--color-text-secondary);
+    font-size: 12px;
+    margin: 0;
+}
