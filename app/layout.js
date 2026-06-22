@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={montserrat.className}>
       <body>
         <main>{children}</main>
-        <Navigation/>
+        <Navigation className="header"/>
       </body>
       
     </html>
